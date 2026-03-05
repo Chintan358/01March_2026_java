@@ -3,8 +3,43 @@ package basic;
 public class B001_Variables {
 		public static void main(String[] args) {
 			
-			int a = 10;
+//			int myAge = 10;
+//			String myFirstName = "abc";
 			
+//			byte b = 127;
+//			short s= -32768;
+//			int i = 456565;
+//			long l = 454545454l;
+			//System.out.println(l);
+			
+			
+//			float f = 456.555465654f;
+//			double d = 466564.56565656;
+//			
+//			System.out.println(f);
+//			System.out.println(d);
+//			
+//			
+//			char ch = 'A';
+//			boolean bool = false;
+			
+//			String name = "rahul";
+			
+			
+//			char ch = 125;
+//			System.out.println(ch);
+			
+//			int i = '}';
+//			System.out.println(i);
+//			
+			//widinnig - implicite casting
+			int a = 10;
+			long l = a;
+			
+			//nerrowing - exlicite
+			long k = 4545;
+			int j = (int)k;
+			System.out.println(j);
 			
 		}
 }

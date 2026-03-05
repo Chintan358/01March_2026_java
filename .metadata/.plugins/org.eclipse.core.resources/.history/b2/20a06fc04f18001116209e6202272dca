@@ -1,0 +1,25 @@
+package basic;
+
+public class B001_Variables {
+		public static void main(String[] args) {
+			
+//			int myAge = 10;
+//			String myFirstName = "abc";
+			
+			byte b = 127;
+			short s= -32768;
+			int i = 456565;
+			long l = 454545454l;
+			//System.out.println(l);
+			
+			
+			float f = 456.55f;
+			double d = 466564.56565656;
+			
+			System.out.println(f);
+			System.out.println(d);
+			
+			
+			
+		}
+}

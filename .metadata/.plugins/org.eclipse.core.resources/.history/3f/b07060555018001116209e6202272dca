@@ -1,0 +1,19 @@
+Datatypes : 
+********************
+byte	0		1 byte   2^7 -1 to -2^7 : 127 to -128
+short	0		2 byte   2^15 -1 to -2^15 : 32767 to -32768
+int 	0		4 byte
+long	0		8 byte
+
+flaot	0.0		4 byte
+double	0.0		8 byte
+
+char	_		2 byte
+boolean false	1 bit
+
+1 bit
+8 bit - 1 byte
+1024 byte - 1kb
+1024 kb - 1mb
+1024 mb - 1gb
+1024 gb - 1 tb
