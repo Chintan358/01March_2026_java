@@ -26,3 +26,20 @@ convert one type to another data type
 - implicite
 - explicite casting
 
+****************************
+operatos : 
+arithmatic
+logical
+comparison
+bitwise
+unary
+turnary
+
+**********************
+statements : 
+
+conditonal : if-else / switch -case
+looping : for, while, do-while
+control : break, continue
+
+

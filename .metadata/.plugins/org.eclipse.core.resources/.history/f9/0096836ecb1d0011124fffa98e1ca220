@@ -1,0 +1,17 @@
+package statements;
+
+public class S001_IF {
+	public static void main(String[] args) {
+		
+		int age = 17;
+		
+		if(age>=18)
+		{
+			System.out.println("elegeble for votin");
+		}
+		else
+		{
+			System.out.println("not elegble for voting");
+		}
+	}
+}

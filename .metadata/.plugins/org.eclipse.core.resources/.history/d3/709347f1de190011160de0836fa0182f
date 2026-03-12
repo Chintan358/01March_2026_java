@@ -1,0 +1,18 @@
+package operators;
+
+public class O001_Unary {
+	
+	public static void main(String[] args) {
+		
+		
+		// ++pre,post++,--pre,post++
+		
+		int a = 10;
+		int b = ++a;
+		
+		System.out.println(a); //10
+		System.out.println(b); //11
+		
+	}
+	
+}
