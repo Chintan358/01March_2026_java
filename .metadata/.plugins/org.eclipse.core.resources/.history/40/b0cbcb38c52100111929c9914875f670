@@ -1,0 +1,35 @@
+package logical;
+
+public class Armstrong {
+	public static void main(String[] args) {
+		
+		int total = 0;
+		for(int k=100;k<=999;k++)
+		{
+		
+		int number = k;
+		int temp = number;
+		int sum = 0;
+		while(number!=0)
+		{
+			int rem = number%10;
+			sum+=(rem*rem*rem);
+			number/=10;
+		}
+			
+		if(temp==sum)
+		{
+			total+=temp;
+			System.out.println(temp+" : Armstrong");
+		}
+		else
+		{
+			//System.out.println(temp +" : Not armstrong");
+		}
+		
+		}
+		
+		System.out.println("Total : "+total);
+	}
+	
+}
