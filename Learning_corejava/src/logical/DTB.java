@@ -3,8 +3,19 @@ package logical;
 public class DTB {
 	public static void main(String[] args) {
 		
-		System.out.println(0140);
+		int number = 189;
+		int sum = 0;
+		int m = 1;
+		while(number!=0)
+		{
+			int rem = number%2;
+			sum = sum + (rem*m);
+			number/=2;
+			m = m*10;
+		}
 		
+		System.out.println(sum);
+	
 		
 	}
 }

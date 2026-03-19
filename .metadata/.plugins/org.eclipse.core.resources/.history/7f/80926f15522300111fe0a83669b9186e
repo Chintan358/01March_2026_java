@@ -1,0 +1,28 @@
+package logical;
+
+public class DTO {
+	public static void main(String[] args) {
+		
+		int number = 155;
+		String sum = "";
+	
+		while(number!=0)
+		{
+			int rem = number%16;
+			if(rem>=10)
+			{
+				rem = rem+55;
+				char k =(char) rem;
+				System.out.println(k);
+				sum = rem+sum;
+			}
+			
+			number/=16;
+			
+		}
+		
+		System.out.println(sum);
+	
+		
+	}
+}

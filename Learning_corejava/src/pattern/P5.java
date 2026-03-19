@@ -1,0 +1,30 @@
+package pattern;
+
+public class P5 {
+	public static void main(String[] args) {
+		
+		
+		
+//		    *****
+//		     ****
+//		      ***
+//		       **
+//		        *
+		
+		int lines = 5;
+		for(int j=0;j<lines;j++)
+		{
+			for(int k=1;k<=j;k++)
+			{
+				System.out.print(" ");
+			}
+			
+			for(int i=1;i<=lines-j;i++)
+			{
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		
+	}
+}
