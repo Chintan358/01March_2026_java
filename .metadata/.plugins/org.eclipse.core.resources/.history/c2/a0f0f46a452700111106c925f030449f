@@ -1,0 +1,33 @@
+package pattern;
+
+public class NP3 {
+	public static void main(String[] args) {
+		
+//		5
+//		45
+//		345
+//		2345
+//		12345
+		
+//		0
+//		10
+//		010
+//		1010
+//		01010
+		
+		int lines = 5;
+		
+		for(int j=1;j<=lines;j++)
+		{
+			for(int i=1;i<=j;i++)
+			{
+				System.out.print(j-i);
+			
+			}
+			System.out.println();
+		}
+		
+		
+		
+	}
+}
