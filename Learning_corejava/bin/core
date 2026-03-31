@@ -42,4 +42,43 @@ conditonal : if-else / switch -case
 looping : for, while, do-while
 control : break, continue
 
+******************
+Array
+
+******************
+OOPs : 
+class
+object
+inheritance
+polymorphism
+encptulation
+abstraction
+
+
+object : 
+realtime entity
+
+state / variables/ data member
+behaviour / method / function member
+
+- memeber can be of 2 types : 
+static - single copy in memory
+non -static by default : copy depende on object creation
+
+method : 
+accessmodifier returntype*  methodname*()
+{
+	//body
+}
+
+class :
+logical entity
+
+
+
+
+
+
+
+
 
