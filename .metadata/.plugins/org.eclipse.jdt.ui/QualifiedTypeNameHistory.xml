@@ -8,4 +8,8 @@
     <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="oops.Student"/>
     <fullyQualifiedTypeName name="oops.Demo"/>
+    <fullyQualifiedTypeName name="oops.Calc"/>
+    <fullyQualifiedTypeName name="oops.Sample"/>
+    <fullyQualifiedTypeName name="oops.Practice"/>
+    <fullyQualifiedTypeName name="oops.B"/>
 </qualifiedTypeNameHistroy>
