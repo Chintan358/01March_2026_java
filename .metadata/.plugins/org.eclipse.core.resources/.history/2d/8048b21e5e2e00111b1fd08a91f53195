@@ -1,0 +1,22 @@
+package oops;
+
+
+class Demo
+{
+	int count = 0;
+	Demo()
+	{
+	
+		System.out.println("const calling"+count);
+		count++;
+	}
+}
+public class O003_ObjectCount {
+	public static void main(String[] args) {
+		
+		Demo d1 = new Demo();
+		Demo d2 = new Demo();
+		Demo d3 = new Demo();
+		
+	}
+}

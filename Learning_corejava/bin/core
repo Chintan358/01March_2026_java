@@ -75,6 +75,9 @@ class :
 logical entity
 
 
+---constructor---
+same as method - witout return type its name will be same as a class name
+
 
 
 

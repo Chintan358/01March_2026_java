@@ -1,0 +1,38 @@
+package oops;
+
+class Student
+{
+	int id=10;
+	String name="sani";
+	String email="sani@gmail.com";
+	
+	Student()
+	{
+		System.out.println("Student calling");
+	}
+	
+	Student(int id)
+	{
+		System.out.println("id : "+id);
+	}
+	
+	Student(String name)
+	{
+		System.out.println("name : "+name);
+	}
+	
+	public void display()
+	{
+		System.out.println(id+" "+name+" "+email);
+	}
+}
+
+public class O002_ClassDemo {
+	public static void main(String[] args) {
+		
+		Student st = new Student("rahul");
+		st.display();
+		
+		
+	}
+}
