@@ -1,0 +1,12 @@
+package oops;
+
+public class Employe {
+		
+	int id;
+	String name;
+	
+	public void display()
+	{
+		System.out.println(id+" "+name);
+	}
+}

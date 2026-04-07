@@ -1,0 +1,8 @@
+package oops;
+
+public class Access {
+		
+	    private int id =10;
+		String name = "sany";
+		
+}

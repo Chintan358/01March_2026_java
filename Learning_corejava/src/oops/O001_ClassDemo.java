@@ -35,5 +35,9 @@ public class O001_ClassDemo
 		p2.toWrite();
 		
 		Pen.display();
+		
+		
+		Access a = new Access();
+		a.id=200;
 	}
 }

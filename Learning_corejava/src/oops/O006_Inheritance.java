@@ -24,12 +24,14 @@ class B extends A
 	}
 }
 
+
 public class O006_Inheritance {
 	public static void main(String[] args) {
 		
 		B b = new B();
 		b.test();
 		//b.display();
+		
 		
 	}
 }

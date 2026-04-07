@@ -1,6 +1,8 @@
 package basic;
 
-public class B001_Variables {
+import oops.Access;
+
+public class B001_Variables extends Access {
 		public static void main(String[] args) {
 			
 //			int myAge = 10;
@@ -40,6 +42,10 @@ public class B001_Variables {
 			long k = 4545;
 			int j = (int)k;
 			System.out.println(j);
+			
+			System.out.println(id);
+			
+			
 			
 		}
 }

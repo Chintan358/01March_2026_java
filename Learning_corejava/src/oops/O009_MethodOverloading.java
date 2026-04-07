@@ -1,0 +1,34 @@
+package oops;
+
+class Maths
+{
+	public void add(int a, int b)
+	{
+		System.out.println("Addtion is  1: "+(a+b));
+	}
+	
+	public void add(int a, int b, int c)
+	{
+		System.out.println("Addtion is 2: "+(a+b+c));
+	}
+	
+	public void add(double a, int b)
+	{
+		System.out.println("Addtion is 3: "+(a+b));
+	}
+	
+	
+}
+
+public class O009_MethodOverloading {
+	public static void main(String[] args) {
+		
+		Maths m = new Maths();
+		m.add(10, 20);
+		m.add(10,20, 30);
+		m.add(10.56, 40);
+		
+	}
+	
+
+}
