@@ -79,6 +79,34 @@ logical entity
 same as method - witout return type its name will be same as a class name
 
 
+Abstraction : 
+hiding implimatation and showing functionality
+
+ - abstract method : 
+ method witout body
+ - instance method : 
+ method with body
+ 
+Abstract class : partial abstraction
+-allow abstract as well as instance method
+
+Interface : fully abstraction
+-allow abstrac tmethod only
+
+Imp classes : 
+String
+String buffer
+Strign builder
+Wrapper
+Object
+Random
+Math
+Date
+
+
+
+
+
 
 
 

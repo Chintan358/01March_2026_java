@@ -1,0 +1,12 @@
+package impclasses;
+
+public class I004_StringBuffer {
+	public static void main(String[] args) {
+		
+		
+		StringBuffer sb = new StringBuffer("Hello");
+		sb.append("python");
+		System.out.println(sb);
+		
+	}
+}

@@ -1,0 +1,14 @@
+package impclasses;
+
+public class I002_Stringmethods {
+	public static void main(String[] args) {
+		
+		
+		String st = "Sun rises in East";
+		
+		System.out.println(st.length());
+		
+		
+		
+	}
+}

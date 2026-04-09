@@ -1,0 +1,37 @@
+package impclasses;
+
+public class I001_StringDemo {
+	public static void main(String[] args) {
+		
+		
+//		String s = "Hello";
+//		String s1 = new String("Hello");
+//		
+//		String k = s.concat("abc");
+//		System.out.println(k);
+		
+		
+		
+		String st = "java";
+		String st1 = "php";
+		String st2 = "java";
+		
+		System.out.println(st.equals(st1));
+		System.out.println(st.equals(st2));
+		System.out.println(st==st2);
+		
+		System.out.println("*************");
+		
+		String a = new String("java");
+		String b = new String("php");
+		String c = new String("java");
+		
+		System.out.println(a.equals(b));
+		System.out.println(a.equals(c));
+		System.out.println(a==c);
+		
+		
+		
+		
+	}
+}
