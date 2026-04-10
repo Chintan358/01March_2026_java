@@ -1,0 +1,28 @@
+package impclasses;
+
+import java.util.Date;
+import java.util.Random;
+
+public class I007_Math_random_date {
+	public static void main(String[] args) {
+		
+		
+//		System.out.println(Math.PI);
+//		System.out.println(Math.E);
+//		System.out.println(Math.sqrt(25));
+//		System.out.println(Math.pow(2, 5));
+//		System.out.println(Math.round(45.4));
+//		System.out.println(Math.ceil(45.1));
+//		System.out.println(Math.floor(45.9999));
+		
+//		Random r  =new Random();
+//		int num = r.nextInt(100,999);
+//		System.out.println(num);
+		
+		Date dt = new Date(1l);
+		System.out.println(dt);
+//		System.out.println(dt.getDate());
+//		System.out.println(dt.getTime());
+		
+	}
+}
