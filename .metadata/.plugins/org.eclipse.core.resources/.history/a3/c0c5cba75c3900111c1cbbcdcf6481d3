@@ -1,0 +1,21 @@
+package exception;
+
+public class ExceptionDemo {
+	public static void main(String[] args) {
+		
+		
+		System.out.println("Program started");
+		try {
+			int a = 10;
+			int b = a/0;
+			System.out.println(b);
+		} 
+		catch (Exception e)
+		{
+			// TODO: handle exception
+		}
+		
+		System.out.println("Progrma ended");
+		
+	}
+}

@@ -1,0 +1,46 @@
+package exception;
+
+class InsufficentAmountException extends Exception
+{
+	
+}
+
+class Bank
+{
+		double balance = 0;
+		
+		public void getBalance()
+		{
+			System.out.println("current balance is : "+balance);
+		}
+		
+		public void deposite(double amount)
+		{
+			balance+=amount;
+		}
+		
+		public void withdrow(double amount) throws InsufficentAmountException
+		{
+			if(amount>balance)
+			{
+				throw new InsufficentAmountException();
+			}
+			else
+			{
+				balance-=amount;
+			}
+		}
+}
+
+public class CustomeExsception {
+	public static void main(String[] args) {
+		
+		Bank b = new Bank();
+		b.getBalance();
+		b.deposite(5000);
+		b.getBalance();
+		b.withdrow(51000);
+		b.getBalance();
+		
+	}
+}
