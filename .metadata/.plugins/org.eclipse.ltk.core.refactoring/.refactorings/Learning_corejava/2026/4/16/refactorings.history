@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;fileio.FilwWrite&apos; to &apos;FileWriterDemo&apos;&#x0D;&#x0A;- Original project: &apos;Learning_corejava&apos;&#x0D;&#x0A;- Original element: &apos;fileio.FilwWrite&apos;&#x0D;&#x0A;- Renamed element: &apos;fileio.FileWriterDemo&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;FilwWrite&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;fileio{FilwWrite.java[FilwWrite" matchStrategy="1" name="FileWriterDemo" qualified="false" references="true" similarDeclarations="false" stamp="1776494800775" textual="false" version="1.0"/>
+</session>

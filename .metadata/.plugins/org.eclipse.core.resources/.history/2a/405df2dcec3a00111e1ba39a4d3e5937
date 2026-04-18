@@ -1,0 +1,22 @@
+package fileio;
+
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+
+public class OutPutStreamDemo {
+	public static void main(String[] args) {
+		
+		
+		try 
+		{
+			FileOutputStream fos = new FileOutputStream("D:\\files\\test.txt");
+		} 
+		catch (FileNotFoundException e) 
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+	}
+}
