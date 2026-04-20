@@ -9,10 +9,11 @@ public class FileDemo {
 		
 		File f = new File("D:\\files\\test.txt");
 		
+		f.setWritable(false);
 //		f.mkdir();
 		
-		System.out.println(f.isFile());
-		System.out.println(f.isDirectory());
+//		System.out.println(f.isFile());
+//		System.out.println(f.isDirectory());
 		
 //		if(f.exists())
 //		{
