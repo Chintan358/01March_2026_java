@@ -43,4 +43,9 @@
     <fullyQualifiedTypeName name="java.io.File"/>
     <fullyQualifiedTypeName name="thread.T1"/>
     <fullyQualifiedTypeName name="thread.T2"/>
+    <fullyQualifiedTypeName name="java.lang.Runnable"/>
+    <fullyQualifiedTypeName name="thread.Th1"/>
+    <fullyQualifiedTypeName name="thread.Th2"/>
+    <fullyQualifiedTypeName name="java.lang.Thread"/>
+    <fullyQualifiedTypeName name="thread.Sample"/>
 </qualifiedTypeNameHistroy>
