@@ -1,0 +1,29 @@
+
+
+class Salary
+{
+	double salary;
+	double bonus;
+	public Salary(double salar, double bonus) {
+		// TODO Auto-generated constructor stub
+		this.salary  =salary;
+		this.bonus = bonus;
+	}
+	
+	public double annualSalary()
+	{
+		double total = (salary*12)+bonus;
+		return total;
+	}
+}
+
+
+
+
+public class Test {
+	public static void main(String[] args) {
+		
+		
+		
+	}
+}

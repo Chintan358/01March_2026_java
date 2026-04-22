@@ -1,0 +1,96 @@
+//
+//
+//class Salary
+//{
+//	double salary;
+//	double bonus;
+//	public Salary(double salary, double bonus) {
+//		// TODO Auto-generated constructor stub
+//		this.salary  =salary;
+//		this.bonus = bonus;
+//	}
+//	
+//	public double annualSalary()
+//	{
+//		double total = (salary*12)+bonus;
+//		return total;
+//	}
+//}
+//
+//class Employee
+//{
+//	String name;
+//	int age;
+//	Salary s;
+//	public Employee(String name, int age,Salary s) 
+//	{
+//		this.name = name;
+//		this.age = age;
+//		this.s = s;
+//	}
+//	
+//	public double totalSalary()
+//	{
+//		return s.annualSalary();
+//	}
+//}
+//
+//
+//public class Test {
+//	public static void main(String[] args) {
+//		
+//		Salary s = new Salary(5000, 2000);
+//		Employee e = new Employee("gopal", 22,s);
+//		System.out.println(e.totalSalary());
+//		
+//	}
+//}
+
+
+
+
+class Salary
+{
+	double salary;
+	double bonus;
+	public Salary(double salary, double bonus) {
+		// TODO Auto-generated constructor stub
+		this.salary  =salary;
+		this.bonus = bonus;
+	}
+	
+	public double annualSalary()
+	{
+		double total = (salary*12)+bonus;
+		return total;
+	}
+}
+
+class Employee
+{
+	String name;
+	int age;
+	Salary s=  null;
+	public Employee(String name, int age,double salary, double bonus) 
+	{
+		this.name = name;
+		this.age = age;
+		 s = new Salary(salary, bonus);
+	}
+	
+	public double totalSalary()
+	{
+		return s.annualSalary();
+	}
+}
+
+
+public class Test {
+	public static void main(String[] args) {
+		
+		
+		Employee e = new Employee("gopal", 22,5000,2000);
+		System.out.println(e.totalSalary());
+		
+	}
+}

@@ -1,0 +1,47 @@
+
+
+class Salary
+{
+	double salary;
+	double bonus;
+	public Salary(double salar, double bonus) {
+		// TODO Auto-generated constructor stub
+		this.salary  =salary;
+		this.bonus = bonus;
+	}
+	
+	public double annualSalary()
+	{
+		double total = (salary*12)+bonus;
+		return total;
+	}
+}
+
+class Employee
+{
+	String name;
+	int age;
+	Salary s;
+	public Employee(String name, int age,Salary s) 
+	{
+		this.name = name;
+		this.age = age;
+		this.s = s;
+	}
+	
+	public double totalSalary()
+	{
+		return s.annualSalary();
+	}
+}
+
+
+public class Test {
+	public static void main(String[] args) {
+		
+		Salary s = new Salary(5000, 2000);
+		Employee e = new Employee("gopal", 22,s);
+		e.totalSalary();
+		
+	}
+}

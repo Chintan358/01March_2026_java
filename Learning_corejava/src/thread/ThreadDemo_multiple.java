@@ -1,5 +1,8 @@
 package thread;
 
+import java.util.Scanner;
+
+
 class Sample extends Thread
 {
 	public void run()
@@ -12,7 +15,7 @@ class Sample extends Thread
 	}
 }
 public class ThreadDemo_multiple {
-	public static void main(String[] args) {
+	 public static void main(String[] args) {
 		
 		Sample s1 = new Sample();
 		Sample s2 = new Sample();
@@ -29,6 +32,8 @@ public class ThreadDemo_multiple {
 		s2.start();
 		
 		s3.start();
+		
+
 		
 	
 		
