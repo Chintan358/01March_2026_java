@@ -1,0 +1,22 @@
+package collection;
+
+import java.util.HashSet;
+import java.util.TreeSet;
+
+public class C004_Treeset {
+	public static void main(String[] args) {
+		
+		TreeSet<String> set = new TreeSet<String>();
+		set.add("java");
+		set.add("python");
+		set.add("android");
+		set.add("java");
+		
+		for(String s : set)
+		{
+			System.out.println(s);
+		}
+		
+		
+	}
+}
