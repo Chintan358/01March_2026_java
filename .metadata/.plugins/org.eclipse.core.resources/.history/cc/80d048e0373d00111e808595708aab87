@@ -1,9 +1,0 @@
-package thread;
-
-
-
-public class RunnbleInterface {
-	public static void main(String[] args) {
-		
-	}
-}
