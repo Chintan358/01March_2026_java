@@ -7,6 +7,7 @@
 <title>Home</title>
 </head>
 <body>
+			${message}
 		<form action="reg" method="post">
 		<input type="text" name="uname" placeholder="Enter username">
 		<input type="text" name="email" placeholder="Enter email">

@@ -1,11 +1,13 @@
 package com;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -15,10 +17,16 @@ import jakarta.servlet.http.HttpServletResponse;
 @WebServlet("/reg")
 public class RegServlet extends HttpServlet {
 	
-	
+		
+		@Override
+		public void init() throws ServletException {
+			System.out.println("Servlet initalized...");
+		}
 		
 		@Override
 		protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+			
+			PrintWriter pw = resp.getWriter();
 			
 			String uname = req.getParameter("uname");
 			String email = req.getParameter("email");
@@ -37,7 +45,13 @@ public class RegServlet extends HttpServlet {
 				int i = ps.executeUpdate();
 				if(i>0)
 				{
-					System.out.println("Data inserted");
+					pw.write("<h1>Data inserted</h1>");
+					req.setAttribute("message", "Data inserted !!!");
+					RequestDispatcher rd = req.getRequestDispatcher("index.jsp");
+					//rd.include(req, resp);
+
+					
+					rd.forward(req, resp);
 				}
 			
 			} catch (ClassNotFoundException | SQLException e) {
