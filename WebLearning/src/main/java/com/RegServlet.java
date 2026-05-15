@@ -45,13 +45,14 @@ public class RegServlet extends HttpServlet {
 				int i = ps.executeUpdate();
 				if(i>0)
 				{
-					pw.write("<h1>Data inserted</h1>");
-					req.setAttribute("message", "Data inserted !!!");
-					RequestDispatcher rd = req.getRequestDispatcher("index.jsp");
-					//rd.include(req, resp);
+					//pw.write("<h1>Data inserted</h1>");
+					//req.setAttribute("message", "Data inserted !!!");
+					RequestDispatcher rd = req.getRequestDispatcher("https://www.fb.com");
+				    //rd.include(req, resp);
 
 					
 					rd.forward(req, resp);
+					//resp.sendRedirect("https://www.fb.com");
 				}
 			
 			} catch (ClassNotFoundException | SQLException e) {
