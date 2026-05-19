@@ -1,3 +1,5 @@
+<%@page import="model.Student"%>
+<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -14,7 +16,10 @@
     >
 </head>
 <body class="bg-light">
-
+	
+	<%
+		ArrayList<Student> all = (ArrayList)request.getAttribute("data");
+	%>
     <div class="container mt-5">
 
         <div class="card shadow">
@@ -38,43 +43,32 @@
                     </thead>
 
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Chintan</td>
-                            <td>chintan@gmail.com</td>
-                            <td>25</td>
+                    <% for(Student st :all){ %>
+                    
+                    	 <tr>
+                         <td><%=st.getId()%></td>
+                         <td><%=st.getName() %></td>
+                         <td><%=st.getEmail() %></td>
+                         <td><%=st.getAge() %></td>
 
-                            <td>
-                                <button class="btn btn-warning btn-sm">
-                                    Edit
-                                </button>
-                            </td>
+                         <td>
+                             <a href="update?action=update&id=<%=st.getId()%>" class="btn btn-warning btn-sm">
+                                 Edit
+                             </a>
+                         </td>
 
-                            <td>
-                                <button class="btn btn-danger btn-sm">
-                                    Delete
-                                </button>
-                            </td>
-                        </tr>
+                         <td>
+                             <a href="update?action=delete&id=<%=st.getId()%>" class="btn btn-danger btn-sm">
+                                 Delete
+                             </a>
+                         </td>
+                     </tr>
+                    	
+                       <%}%>
+                    
+                       
 
-                        <tr>
-                            <td>2</td>
-                            <td>Rahul</td>
-                            <td>rahul@gmail.com</td>
-                            <td>22</td>
-
-                            <td>
-                                <button class="btn btn-warning btn-sm">
-                                    Edit
-                                </button>
-                            </td>
-
-                            <td>
-                                <button class="btn btn-danger btn-sm">
-                                    Delete
-                                </button>
-                            </td>
-                        </tr>
+                   
                     </tbody>
 
                 </table>
