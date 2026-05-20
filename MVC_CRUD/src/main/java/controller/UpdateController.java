@@ -8,6 +8,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import model.Student;
 
 @WebServlet("/update")
 public class UpdateController extends HttpServlet {
@@ -27,7 +28,34 @@ public class UpdateController extends HttpServlet {
 		}
 		else if(action.equals("update"))
 		{
-			System.out.println("update calling"+id);
+			Student st = dao.StudentById(id);
+			req.setAttribute("st", st);
+			req.getRequestDispatcher("update.jsp").forward(req, resp);
 		}
+	}
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		int id = Integer.parseInt(req.getParameter("id"));
+		String name = req.getParameter("name");
+		String email = req.getParameter("email");
+		int age = Integer.parseInt( req.getParameter("age"));
+		
+		Student st =  new Student();
+		st.setId(id);
+		st.setName(name);
+		st.setEmail(email);
+		st.setAge(age);
+		
+		StudentDao dao = new StudentDao();
+		int i = dao.updateStudent(st);
+		if(i>0)
+		{
+			req.setAttribute("msg", "update successfully");
+			req.getRequestDispatcher("update.jsp").forward(req, resp);
+		}
+		
+		
 	}
 }
