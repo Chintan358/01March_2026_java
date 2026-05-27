@@ -15,6 +15,7 @@ public class RegController extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
+		String id = req.getParameter("id");
 		String name = req.getParameter("name");
 		double price = Double.parseDouble(req.getParameter("price"));
 		int qty = Integer.parseInt(req.getParameter("qty"));
@@ -23,14 +24,28 @@ public class RegController extends HttpServlet {
 		p.setName(name);
 		p.setPrice(price);
 		p.setQty(qty);
-		
 		ProductDao dao = new ProductDao();
-		int i = dao.addProduct(p);
-		if(i>0)
+		
+		if(id=="")
 		{
-			req.setAttribute("msg", "Product inserted successfully");
-			req.getRequestDispatcher("index.jsp").forward(req, resp);
+			int i = dao.addProduct(p);
+			if(i>0)
+			{
+				req.setAttribute("msg", "Product inserted successfully");
+				req.getRequestDispatcher("index.jsp").forward(req, resp);
+			}
 		}
+		else
+		{
+			p.setId(Integer.parseInt(id));
+			int i = dao.updateProduct(p);
+			if(i>0)
+			{
+				req.setAttribute("msg", "Product updated successfully");
+				req.getRequestDispatcher("index.jsp").forward(req, resp);
+			}
+		}
+		
 		
 	}
 }

@@ -27,7 +27,7 @@
                     <div class="card-body">
 						<span class="text-success">${msg}</span>
                         <form method="post" action="reg">
-
+							<input type="hidden" name="id" value="${p.getId()}">
                             <!-- Product Name -->
                             <div class="mb-3">
                                 <label class="form-label">Product Name</label>
@@ -36,6 +36,7 @@
                                     class="form-control"
                                     name="name"
                                     placeholder="Enter product name"
+                                    value="${p.getName()}"
                                 />
                             </div>
 
@@ -47,6 +48,7 @@
                                     class="form-control"
                                     name="price"
                                     placeholder="Enter price"
+                                    value="${p.getPrice() }"
                                 />
                             </div>
 
@@ -58,6 +60,7 @@
                                     class="form-control"
                                     name="qty"
                                     placeholder="Enter quantity"
+                                    value="${p.getQty()}"
                                 />
                             </div>
 
@@ -66,6 +69,9 @@
                                 <button type="submit" class="btn btn-success px-4">
                                     Save Product
                                 </button>
+                                 <a href="display" class="btn btn-success px-4">
+                                    Display
+                                </a>
                             </div>
 
                         </form>

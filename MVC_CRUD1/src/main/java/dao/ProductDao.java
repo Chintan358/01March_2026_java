@@ -3,6 +3,7 @@ package dao;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -43,24 +44,78 @@ public class ProductDao {
 	public ArrayList<Product> allProducts()
 	{
 		ArrayList<Product> al = new ArrayList();
+		try {
+			PreparedStatement ps = 
+					cn.prepareStatement("select * from product");
+			ResultSet rs = ps.executeQuery();
+			while(rs.next())
+			{
+				Product p = new Product();
+				p.setId(rs.getInt(1));
+				p.setName(rs.getString(2));
+				p.setPrice(rs.getDouble(3));
+				p.setQty(rs.getInt(4));
+				al.add(p);
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return al;
 	}
 	
 	public int deleteProduct(int id)
 	{
 		int i = 0;
+		try {
+			PreparedStatement ps = 
+					cn.prepareStatement("delete from product where id=?");
+			ps.setInt(1, id);
+			i = ps.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return i;
 	}
 	
 	public Product productById(int id)
 	{
 		Product p = new Product();
+		try {
+			PreparedStatement ps = 
+					cn.prepareStatement("select * from product where id=?");
+			ps.setInt(1, id);
+			ResultSet rs = ps.executeQuery();
+			if(rs.next())
+			{
+				p.setId(rs.getInt(1));
+				p.setName(rs.getString(2));
+				p.setPrice(rs.getDouble(3));
+				p.setQty(rs.getInt(4));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return p;
 	}
 	
 	public int updateProduct(Product p)
 	{
 		int i=0;
+		try {
+			PreparedStatement ps = 
+					cn.prepareStatement("update product set name=?,price=?,qty=? where id=?");
+			ps.setString(1, p.getName());
+			ps.setDouble(2, p.getPrice());
+			ps.setInt(3, p.getQty());
+			ps.setInt(4, p.getId());
+			i = ps.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return i;
 	}
 	

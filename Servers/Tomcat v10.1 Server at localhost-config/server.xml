@@ -142,7 +142,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="MyWeb" path="/MyWeb" reloadable="true" source="org.eclipse.jst.jee.server:MyWeb"/><Context docBase="WebLearning" path="/WebLearning" reloadable="true" source="org.eclipse.jst.jee.server:WebLearning"/><Context docBase="ServletContext_config" path="/ServletContext_config" reloadable="true" source="org.eclipse.jst.jee.server:ServletContext_config"/><Context docBase="MVC_CRUD" path="/MVC_CRUD" reloadable="true" source="org.eclipse.jst.jee.server:MVC_CRUD"/><Context docBase="MVC_CRUD1" path="/MVC_CRUD1" reloadable="true" source="org.eclipse.jst.jee.server:MVC_CRUD1"/></Host>
+      <Context docBase="MyWeb" path="/MyWeb" reloadable="true" source="org.eclipse.jst.jee.server:MyWeb"/><Context docBase="WebLearning" path="/WebLearning" reloadable="true" source="org.eclipse.jst.jee.server:WebLearning"/><Context docBase="ServletContext_config" path="/ServletContext_config" reloadable="true" source="org.eclipse.jst.jee.server:ServletContext_config"/><Context docBase="MVC_CRUD" path="/MVC_CRUD" reloadable="true" source="org.eclipse.jst.jee.server:MVC_CRUD"/><Context docBase="MVC_CRUD1" path="/MVC_CRUD1" reloadable="true" source="org.eclipse.jst.jee.server:MVC_CRUD1"/><Context docBase="Authentication" path="/Authentication" reloadable="true" source="org.eclipse.jst.jee.server:Authentication"/><Context docBase="Filter_Learning" path="/Filter_Learning" reloadable="true" source="org.eclipse.jst.jee.server:Filter_Learning"/></Host>
     </Engine>
   </Service>
 </Server>
