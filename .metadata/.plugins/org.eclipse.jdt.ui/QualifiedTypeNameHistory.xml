@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="ABC"/>
-    <fullyQualifiedTypeName name="ABC.XYZ"/>
     <fullyQualifiedTypeName name="Employee"/>
     <fullyQualifiedTypeName name="Salary"/>
     <fullyQualifiedTypeName name="thread.Account"/>
@@ -60,4 +58,6 @@
     <fullyQualifiedTypeName name="jakarta.servlet.annotation.WebFilter"/>
     <fullyQualifiedTypeName name="jakarta.servlet.http.HttpFilter"/>
     <fullyQualifiedTypeName name="jakarta.servlet.RequestDispatcher"/>
+    <fullyQualifiedTypeName name="java.util.regex.Pattern"/>
+    <fullyQualifiedTypeName name="com.Validation"/>
 </qualifiedTypeNameHistroy>

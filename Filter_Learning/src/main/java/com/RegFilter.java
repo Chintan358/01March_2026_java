@@ -37,10 +37,20 @@ public class RegFilter extends HttpFilter {
 			req.setAttribute("emailErr", "Email Required !!!");
 			rd.forward(req, resp);
 		}
+		else if(!Validation.emailCheck(email))
+		{
+			req.setAttribute("emailErr", "Invalid email format!!!");
+			rd.forward(req, resp);
+		}
 		
 		if(phone=="" || phone==null)
 		{
 			req.setAttribute("phoneErr", "Phone Required !!!");
+			rd.forward(req, resp);
+		}
+		else if(!Validation.phonecheck(phone))
+		{
+			req.setAttribute("phoneErr", "Invalid Phone !!!");
 			rd.forward(req, resp);
 		}
 		
