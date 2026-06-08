@@ -2,6 +2,7 @@
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -40,7 +41,7 @@
 
                     <tbody>
                     
-                    <%
+                   <%--  <%
                     	ArrayList<Product> prods = (ArrayList)request.getAttribute("products");
                     	for(Product p : prods)
                     	{ %>
@@ -56,9 +57,22 @@
                         </tr>
                     		
                     	<%}
-                    %>
+                    %> --%>
                         
-
+                        
+					<c:forEach var="p" items="${products}">
+					
+					   <tr>
+                            <td>${p.getId()}</td>
+                            <td>${p.getName() }</td>
+                            <td>₹${p.getPrice() }</td>
+                            <td>${p.getQty() }</td>
+                            <td><a href="update?action=update&id=${p.getId()}" class="btn btn-primary">Update</a></td>
+                        <td><a href="update?action=delete&id=${p.getId()}" class="btn btn-danger">Delete</a></td>
+                     
+                        </tr>
+					
+					</c:forEach>
                         
                     </tbody>
                 </table>

@@ -15,7 +15,11 @@ public class Validation {
 	    
 	    public static boolean emailCheck(String email) {
 	        if (email == null) return false;
-	        return EMAIL_PATTERN.matcher(email).matches();
+	        return   
+	        		
+	        		
+	        		
+	        		
 	    }
 	    
 	    public static boolean phonecheck(String phone)
