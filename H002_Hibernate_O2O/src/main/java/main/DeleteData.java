@@ -16,11 +16,6 @@ import model.Person;
 public class DeleteData {
 	public static void main(String[] args) {
 		
-		
-		
-		
-	
-		
 		SessionFactory sf = new Configuration()
 				.configure("hibernate.cfg.xml")
 				.addAnnotatedClass(Passport.class)
