@@ -10,6 +10,6 @@ import com.example.demo.model.Employee;
 public interface EmployeeRepo extends JpaRepository<Employee, Integer> {
 
 		public List<Employee> findByDept(Department d);
-		public Employee findByEmail(String email);
+	
 		
 }

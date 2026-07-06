@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import com.example.demo.dto.DepartmentDto;
 import com.example.demo.model.Department;
 import com.example.demo.repo.DepartmentRepo;
+import com.example.demo.util.ResourceNotFoundException;
 
 @Service
 public class DeptServiceImpl implements DeptService {
@@ -49,20 +50,25 @@ public class DeptServiceImpl implements DeptService {
 
 	@Override
 	public DepartmentDto retrive(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		Department dept = repo.findById(id).orElseThrow(()->new ResourceNotFoundException("Department", "Id", id));
+		return mapper.map(dept, DepartmentDto.class);
 	}
 
 	@Override
 	public void destroy(int id) {
-		// TODO Auto-generated method stub
+		Department dept = repo.findById(id).orElseThrow(()->new ResourceNotFoundException("Department", "Id", id));
+		repo.delete(dept);
 		
 	}
 
 	@Override
 	public DepartmentDto update(DepartmentDto dept, int id) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		Department d = repo.findById(id).orElseThrow(()->new ResourceNotFoundException("Department", "Id", id));
+		d.setName(dept.getName());
+		
+		return mapper.map(repo.save(d), DepartmentDto.class);
 	}
 
 }

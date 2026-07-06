@@ -15,54 +15,72 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.dto.DepartmentDto;
+import com.example.demo.dto.EmployeeDto;
 import com.example.demo.service.DeptService;
+import com.example.demo.service.EmpService;
 import com.example.demo.util.APIResponse;
 
 import jakarta.validation.Valid;
 
 @RestController
-@RequestMapping("/depts")
-public class DeptContorller {
+@RequestMapping("/emps")
+public class EmpController {
 
 	@Autowired
 	DeptService deptService;
 	
-	@PostMapping("/")
-	public ResponseEntity<DepartmentDto> create(@Valid @RequestBody DepartmentDto dto)
+	@Autowired
+	EmpService empService;
+	
+	@PostMapping("/dept/{id}")
+	public ResponseEntity<EmployeeDto> create(@Valid @RequestBody EmployeeDto dto,@PathVariable("id") int id)
 	{
-		DepartmentDto createdDept = deptService.create(dto);
+		dto.setDept(deptService.retrive(id));
+		EmployeeDto createdDept = empService.create(dto);
 		return new ResponseEntity<>(createdDept,HttpStatus.CREATED);
 	}
 	
 	@GetMapping("/")
-	public ResponseEntity<List<DepartmentDto>> list()
+	public ResponseEntity<List<EmployeeDto>> list()
 	{
-		List<DepartmentDto> all = deptService.list();
+		List<EmployeeDto> all = empService.list();
 		return new ResponseEntity<>(all,HttpStatus.OK);
 	}
 	
-	@GetMapping("/{id}")
-	public ResponseEntity<DepartmentDto> retrive(@PathVariable("id") int id)
+	@GetMapping("/dept/{id}")
+	public ResponseEntity<List<EmployeeDto>> empbydept(@PathVariable("id") int id)
 	{
-		DepartmentDto dto = deptService.retrive(id);
+		DepartmentDto dt = deptService.retrive(id);
+		List<EmployeeDto> all = empService.empbyDept(dt);
+		return new ResponseEntity<>(all,HttpStatus.OK);
+	}
+	
+	
+	@GetMapping("/{id}")
+	public ResponseEntity<EmployeeDto> retrive(@PathVariable("id") int id)
+	{
+		EmployeeDto dto = empService.retrive(id);
 		return new ResponseEntity<>(dto,HttpStatus.OK);
 	}
+	
+	
 	
 	@DeleteMapping("/{id}")
 	public ResponseEntity<APIResponse> delete(@PathVariable("id") int id)
 	{
-		deptService.destroy(id);
+		empService.destroy(id);
 		APIResponse resp = new APIResponse();
-		resp.setMessage("Dept deleted");
+		resp.setMessage("Emp deleted");
 		resp.setSuccess(true);
 		return new ResponseEntity<>(resp,HttpStatus.OK);
 	}
 	
 	
-	@PutMapping("/{id}")
-	public ResponseEntity<DepartmentDto> update(@RequestBody DepartmentDto dept, @PathVariable("id") int id)
+	@PutMapping("/{id}/dept/{did}")
+	public ResponseEntity<EmployeeDto> update(@RequestBody EmployeeDto dept, @PathVariable("id") int id,@PathVariable("did") int did)
 	{
-		DepartmentDto updated = deptService.update(dept,id);
+		dept.setDept(deptService.retrive(did));
+		EmployeeDto updated = empService.update(dept,id);
 		return new ResponseEntity<>(updated,HttpStatus.CREATED);
 	}
 	

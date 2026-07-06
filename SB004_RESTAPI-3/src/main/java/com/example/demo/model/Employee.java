@@ -14,7 +14,7 @@ public class Employee {
 	private String name;
 	private String phone;
 	
-	@ManyToOne(cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST,CascadeType.REFRESH})
+	@ManyToOne(cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.REFRESH})
 	@JoinColumn(name="deptid")
 	private Department dept;
 }
