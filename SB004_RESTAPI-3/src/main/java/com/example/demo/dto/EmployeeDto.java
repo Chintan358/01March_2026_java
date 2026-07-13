@@ -13,4 +13,5 @@ public class EmployeeDto {
 	private String name;
 	private String phone;
 	private DepartmentDto dept;
+	private String image;
 }

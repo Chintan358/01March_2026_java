@@ -73,6 +73,7 @@ public class EmpServiceImpl implements EmpService {
 		Employee e = repo.findById(id).orElseThrow(()->new ResourceNotFoundException("Employee", "Id", id));
 		e.setName(dto.getName());
 		e.setPhone(dto.getPhone());
+		e.setImage(dto.getImage());
 		e.setDept(mapper.map(dto.getDept(), Department.class));
 		
 		
