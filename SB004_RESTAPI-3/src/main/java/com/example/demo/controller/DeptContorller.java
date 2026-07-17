@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,10 +19,13 @@ import com.example.demo.dto.DepartmentDto;
 import com.example.demo.service.DeptService;
 import com.example.demo.util.APIResponse;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/depts")
+@CrossOrigin(origins = "*")
+@Tag(name = "Department API", description = "Operations related to Department")
 public class DeptContorller {
 
 	@Autowired

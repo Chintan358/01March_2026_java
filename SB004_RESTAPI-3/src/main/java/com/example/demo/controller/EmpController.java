@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -28,12 +29,16 @@ import com.example.demo.service.DeptService;
 import com.example.demo.service.EmpService;
 import com.example.demo.util.APIResponse;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.servlet.annotation.MultipartConfig;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/emps")
+@CrossOrigin(origins = "*")
+@Tag(name = "Employee API", description = "Operations related to employee")
 public class EmpController {
 
 	@Autowired
@@ -45,6 +50,7 @@ public class EmpController {
 	@Value("${project.image}")
 	String path;
 	
+	@Operation(summary = "Create empoyee")
 	@PostMapping("/dept/{id}")
 	public ResponseEntity<EmployeeDto> create(@Valid @RequestBody EmployeeDto dto,@PathVariable("id") int id)
 	{
