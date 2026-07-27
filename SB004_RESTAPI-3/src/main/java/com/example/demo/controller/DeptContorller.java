@@ -24,7 +24,6 @@ import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/depts")
-@CrossOrigin(origins = "*")
 @Tag(name = "Department API", description = "Operations related to Department")
 public class DeptContorller {
 

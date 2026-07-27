@@ -37,7 +37,6 @@ import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/emps")
-@CrossOrigin(origins = "*")
 @Tag(name = "Employee API", description = "Operations related to employee")
 public class EmpController {
 

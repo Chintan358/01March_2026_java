@@ -12,5 +12,6 @@ D:\Chintan_wok\01March_2026_java\SB004_RESTAPI-3\src\main\java\com\example\demo\
 D:\Chintan_wok\01March_2026_java\SB004_RESTAPI-3\src\main\java\com\example\demo\service\EmpService.java
 D:\Chintan_wok\01March_2026_java\SB004_RESTAPI-3\src\main\java\com\example\demo\service\EmpServiceImpl.java
 D:\Chintan_wok\01March_2026_java\SB004_RESTAPI-3\src\main\java\com\example\demo\util\APIResponse.java
+D:\Chintan_wok\01March_2026_java\SB004_RESTAPI-3\src\main\java\com\example\demo\util\CorsConfig.java
 D:\Chintan_wok\01March_2026_java\SB004_RESTAPI-3\src\main\java\com\example\demo\util\GlobleExceptionHandler.java
 D:\Chintan_wok\01March_2026_java\SB004_RESTAPI-3\src\main\java\com\example\demo\util\ResourceNotFoundException.java
